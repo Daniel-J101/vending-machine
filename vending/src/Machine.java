@@ -29,6 +29,20 @@ public class Machine {
             return false;
     }
 
+    public String toString() {
+        String temp = "";
+        for(int i = 0; i < items.length; i++) {
+            temp += "\t";
+            for(int j = 0; j < items[i].length; j++) {
+                if(items[i][j] == null) continue;
+                temp += items[i][j] + " ";
+            }
+            temp += "\n\n";
+        }
+        temp += "\t************************************************";
+        return temp;
+    }
+
     public Item getItem(int row, int spot)  {
         return new Item(items[row][spot]);
     }
